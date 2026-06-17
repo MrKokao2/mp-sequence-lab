@@ -17,4 +17,4 @@ WORKDIR /app/lab5
 RUN cmake -S . -B build
 RUN cmake --build build
 
-CMD ["./build/matmul_tests"]
+CMD ["./build/setrel_tests"]

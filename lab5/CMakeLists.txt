@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(lab5_matmul LANGUAGES CXX)
+project(lab5_setrel LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,11 +13,11 @@ find_package(OpenMP REQUIRED)
 
 include_directories(include)
 
-add_library(matmul src/matmul.cpp)
-target_link_libraries(matmul PUBLIC OpenMP::OpenMP_CXX)
+add_library(setrel src/setrel.cpp)
+target_link_libraries(setrel PUBLIC OpenMP::OpenMP_CXX)
 
-add_executable(matmul_app src/main.cpp)
-target_link_libraries(matmul_app PRIVATE matmul)
+add_executable(setrel_app src/main.cpp)
+target_link_libraries(setrel_app PRIVATE setrel)
 
-add_executable(matmul_tests tests/test_matmul.cpp)
-target_link_libraries(matmul_tests PRIVATE matmul)
+add_executable(setrel_tests tests/test_setrel.cpp)
+target_link_libraries(setrel_tests PRIVATE setrel)

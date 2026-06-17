@@ -1,7 +1,17 @@
 .idea/
 cmake-build-*/
 build/
+results/
+__pycache__/
 *.exe
 *.dll
 *.so
 *.o
+
+# In-source CMake / Visual Studio artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.sln
+*.vcxproj
+*.vcxproj.filters
